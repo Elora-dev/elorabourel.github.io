@@ -1,4 +1,8 @@
 /*Start global*/
+@font-face {
+    font-family: 'Ananda';
+    src: local("Ananda Personal Use"),
+}
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +14,13 @@ html {
     font-family: Arial, Helvetica, sans-serif;
     color: #eee;
     overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
 }
 
 body {
@@ -115,21 +126,15 @@ header {
 }
 
 #imgheader {
-    
     flex: 1;
     
-    
 }
-
-#imgcontainer {
-
-}
-
 
 .top-nav {
     justify-content: center;
     width: 80%;
     height: 10vh;
+    left: 10%;
     position: fixed;
     top: -100vh;
     z-index: 50;
@@ -166,7 +171,9 @@ li {
 
 .top-nav.open {
     top: 0;
-    left: 10%;
+    /* justify-content: center;
+    align-items: center; */
+    /* left: 10%; */
     /* border-radius: initial; */
 }
 
@@ -233,34 +240,36 @@ li {
 
 .landing-text h1 {
     font-size: 6rem;
+    font-family: 'Ananda', sans-serif;
 }
 
-.landing-text h6 {
-    font-size: 1rem;
+.typewriter h2 {
+    font-size: 1.3em;
     font-weight: normal;
+    width: 390px;
 }
 
-.landing-text h6 {
+.typewriter h2 {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid rgb(95, 95, 95); /* The typwriter cursor */
+    border-right: .15em solid orange; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     letter-spacing: .15em; /* Adjust as needed */
     animation: 
-      typing 2s steps(40, end),
+      typing 2.5s steps(40, end),
       blink-caret .75s step-end infinite;
   }
   
   /* The typing effect */
   @keyframes typing {
     from { width: 0 }
-    to { width: 15% }
+    to { width: 30% }
   }
   
   /* The typewriter cursor effect */
   @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: rgb(107, 107, 107); }
+    50% { border-color: orange; }
   }
 
 /*End header*/
@@ -326,7 +335,7 @@ li {
 } 
 
 .fa-linkedin:hover {
-    background: linear-gradient(to right, #ae8625, #f7ef8a, #d2ac47, #edc967);
+    background-color: #0e76a8;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
@@ -371,111 +380,34 @@ li {
     margin-bottom: 40px;
 }
 /* ICON CONTAINER HEXAGON */
- .icon-container1 {
-    position: relative;
-    width: 150px; 
-    height: 86.60px;
-    background: linear-gradient( to bottom, #ae8625,  #edc967, #ae8625 );
-    margin: 43.30px 0;
-    box-shadow: 0 0 40px rgba(0,0,0,0.6);
-    
-  }
-  
-  .icon-container1:before,
-  .icon-container1:after {
-    content: "";
-    position: absolute;
-    width: 0;
-    border-left: 75px solid transparent;
-    border-right: 75px solid transparent;
-    
-  }
-  
-  .icon-container1:before {
-    content:'';
-    bottom: 100%;
-    width: 0.5px;
-    margin-left: -29%;
-    border-bottom: 43.30px solid  #ae8625;
-    
-    
-  }
-  
-  .icon-container1:after {
-    content: '';
-    top: 100%;
-    width: 0.5px;
-    margin-left: -71.5%;
-    border-top: 43.30px solid #ae8625;
-  } 
-   
 
-  .icon-container2 {
-    position: relative;
-    width: 151.5px; 
-    height: 86.60px;
-    background: linear-gradient( to bottom, #ae8625,  #edc967, #ae8625 );
-    margin: 43.30px 0;
-    box-shadow: 0 0 40px rgba(0,0,0,0.6);
-  }
-  
-  .icon-container2:before,
-  .icon-container2:after {
-    content: "";
-    position: absolute;
-    width: 0;
-    border-left: 75px solid transparent;
-    border-right: 75px solid transparent;
-  }
-  
-  .icon-container2:before {
-    bottom: 99%;
-    width: 3px;
-    margin-left: -24%;
-    border-bottom: 43.30px solid #ae8625;
-  }
-  
-  .icon-container2:after {
-    top: 100%;
-    width: 0.5px;
-    margin-left: -77%;
-    border-top: 43.30px solid #ae8625;
-  }
 
-  .icon-container3 {
-    position: relative;
-    width: 150px; 
-    height: 86.60px;
-    background: linear-gradient( to bottom, #ae8625,  #edc967, #ae8625 );
-    margin: 43.30px 0;
-    box-shadow: 0 0 40px rgba(0,0,0,0.6);
-  }
-  
-  .icon-container3:before,
-  .icon-container3:after {
-    content: "";
-    position: absolute;
+.hex {
+ 
     width: 0;
-    border-left: 75px solid transparent;
-    border-right: 75px solid transparent;
-  }
-  
-  .icon-container3:before {
-    bottom: 100%;
-    margin-left: -36.5%;
-    border-bottom: 43.30px solid #ae8625;
-  }
-  
-  .icon-container3:after {
-    top: 100%;
-    width: 0.5px;
-    margin-left: -63.5%;
-    border-top: 43.30px solid #ae8625;
-    
-  }
+    border-bottom: 40px solid #ae8625;
+    border-left: 78px solid transparent;
+    border-right: 78px solid transparent;
+
+}
+
+.hex-middle {
+    width: 156px;
+    height: 90px;
+    background: linear-gradient( to bottom, #ae8625,  #edc967, #ae8625 );;
+
+}
+
+.hex-bottom {
+    width: 0;
+    border-top: 40px solid #ae8625;
+    border-left: 78px solid transparent;
+    border-right: 78px solid transparent;
+}
+
   /* END ICON CONTAINER HEXAGON */
 
-.icon-container1, .icon-container2, .icon-container3 i {
+.icon-container1 i {
     color: black;
     font-size: 4rem;
     padding-top: 10px;
@@ -483,7 +415,9 @@ li {
 
 @media screen and (max-width: 600px) {
 
-    
+    #imgheader {
+        width: 100%;
+    }
     .menu-toggler{
         top: 2rem;
         right: 2rem;
@@ -494,46 +428,57 @@ li {
         text-align: center;
         margin:150px 0 3px 0;
     }
-    /* .nav-list.open {
-        display: flex;
-        flex-direction: column;
-    
-    } */
 
     .top-nav.open {
        left: 0;
+       background: linear-gradient(to top, black, rgb(65, 65, 65), rgb(131, 131, 131));
     }
 
     .top-nav {
         width: 100%;
         height: 100vh;
         border-radius : initial;
+        background: linear-gradient(to top, black, rgb(65, 65, 65), rgb(131, 131, 131))
     }
 
-    /* .top-nav.open .nav-link:hover,
-    .nav-link:focus {
-    background: linear-gradient(to top, #ae8625, #f7ef8a, #d2ac47, #edc967);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-} */
-
+    
     .landing-text h1 {
         font-size: 5rem;
     }
 
-    .landing-text h6 {
-        font-size: 1.4rem;
+    .landing-text h2 {
+        font-size: 1em;
+        width: 300px;
         
     }
 
-    /* The typing effect */
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
+    .typewriter h2 {
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .15em solid orange; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em; /* Adjust as needed */
+        animation: 
+          typing 3s steps(40, end),
+          blink-caret .75s step-end infinite;
+      }
+      
+      /* The typing effect */
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 73% }
+      }
+      
+      /* The typewriter cursor effect */
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: orange; }
+      }
+    
+
 
     .nav-link {
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
 
     .about .container {
@@ -550,7 +495,7 @@ li {
     }
 
     .profile-img {
-        margin : 0 0 7rem 0;
+        margin : 0 0 1rem 0;
     }
 
     .portfolio-item {
@@ -763,6 +708,15 @@ input[type="submit"]:hover{
 		background-position: 0% 50%;
 	}
 }
+
+/* [aos="fade-right"] {
+    opacity: 0;
+    transition-property: opacity;
+  }
+  
+  [aos="fade-right"].aos-animate {
+    opacity: 1;
+  } */
 /*End animations*/
 
 /*Start media queries*/
