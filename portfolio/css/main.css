@@ -92,6 +92,7 @@ img {
     text-shadow: 2px 2px rgba(0,0,0,0.6);
     background : linear-gradient(to right, #444444, #ffd726, #ffffff, #000000);
     -webkit-background-clip: text;
+            background-clip: text;
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
     font-weight: 300;
@@ -200,6 +201,7 @@ li {
 .nav-link:focus {
     background: linear-gradient(to top, #ae8625, #f7ef8a, #d2ac47, #edc967);
     -webkit-background-clip: text;
+            background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -355,12 +357,14 @@ li {
 .fa-github-square:hover {
     background-color: #6e5494;
     -webkit-background-clip: text;
+            background-clip: text;
     -webkit-text-fill-color: transparent;
 } 
 
 .fa-linkedin:hover {
     background-color: #0e76a8;
     -webkit-background-clip: text;
+            background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 /*End about*/
@@ -683,6 +687,7 @@ input[type="submit"]:hover{
 .up i {
     background: linear-gradient(to top, #ae8625, #f7ef8a, #d2ac47, #edc967);
     -webkit-background-clip: text;
+            background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 2rem;
     margin: auto;
@@ -718,9 +723,6 @@ input[type="submit"]:hover{
 	}
 }
 /*End animations*/
-
-/*Start media queries*/
-/*End media queries*/
 
 
 
