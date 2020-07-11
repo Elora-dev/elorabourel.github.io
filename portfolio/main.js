@@ -12,11 +12,11 @@ $(document).ready(function() {
         $('.bar.half').removeClass('open');
     
     });
- });
+});
  
- AOS.init({
+AOS.init({
     duration: 1200,
-  })
+})
 
 
  
